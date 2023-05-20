@@ -1,0 +1,80 @@
+/* Questão 1 - Desenvolva um algoritmo em C, que leia um numero inteiro, armazene-o em uma variável do tipo inteiro, crie uma variável do tipo ponteiro, faça a
+troca do conteúdo do valor armazenado da variável do tipo inteiro para a variável do tipo ponteiro. Exiba os valores antes e após a troca.*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+int main() {
+    int numero = 0;
+    int *pNumero =  0;
+    setlocale(LC_ALL,"portuguese");
+    
+    pNumero = &numero;
+    printf("Valor do número: %d\n", numero);
+    printf("Valor do ponteiro: %d\n", *pNumero);
+    
+    printf("\nDigite um novo número inteiro:\n");
+    scanf("%d", &numero);
+    
+    printf("\nValor do numero: %d\n", numero);
+	printf("Valor do ponteiro: %d\n", *pNumero);
+}
+
+/*Questão 2 - Desenvolva um algoritmo em C, que leia um numero inteiro, armazene-o em uma variável do tipo inteiro, crie uma uma função por meio de uma de variável 
+do tipo ponteiro. Exiga o resultdo, antes e apos a chamda da função.*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+void imprime (int *p);
+
+int main() {
+    int n;
+    setlocale(LC_ALL,"portuguese");
+    
+    printf("Digite um numero inteiro:\n");
+    scanf("%d",&n);
+    printf("Valor do número antes da chamada: %d\n",n);
+    imprime(&n);
+    printf("Valor do número após a chamada = %d\n",n);
+}
+
+void imprime (int *p){
+	printf("\tDentro da função sem alteração = %d\n",*p);
+	*p = *p * 2;
+	printf("\tDentro da função com alteração = %d\n",*p);
+}
+
+/* Questão 3 - Desenvolva um algoritmo em C, que leia um numero inteiro, armazene-o em uma variável do tipo inteiro, converta a variável do tipo inteiro para um 
+determinado tipo variável do tipo ponteiro, atribua um valor para esse tipo. Exiba o formato após essa atribuição.*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+int main() {
+    int numero = 0;
+    int *pNumero =  0;
+    setlocale(LC_ALL,"portuguese");
+    
+    pNumero = &numero;
+    printf("Valor do número: %d\n", numero);
+    printf("Valor do ponteiro: %d\n", *pNumero);
+    
+    printf("\nDigite um novo número inteiro:\n");
+    scanf("%d", &numero);
+    
+    printf("\nValor do numero: %d\n", numero);	
+	printf("Valor do ponteiro: %d\n", *pNumero);
+	
+	*pNumero = 100;
+	
+	printf("\nNovo valor adicionado ao ponteiro:\n");
+	printf("Valor do ponteiro: %d", *pNumero);
+	printf("\nValor do numero: %d\n", numero);
+}
+
+/*Questão 4 - Desenvolva um algoritmo em C, que leia o conteúdo de váriaveis ponteiro do tipo inteiro, armazene-as em uma estrutura do tipo pilha, manipula os 
+valores e exiba-os.*/
+infelizmente não consegui fazer
